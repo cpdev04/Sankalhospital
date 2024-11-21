@@ -1,0 +1,180 @@
+/*-------------------------------------------------------
+35. Team css 
+---------------------------------------------------------*/
+
+.team-box {
+	position: relative;
+	z-index: 1;
+	&:hover {
+		.team-overlay {
+			transform: scale(1);
+		}
+	}
+	.team-main-pic {
+		width: 100%;
+	}
+}
+
+
+.team-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	z-index: 1;
+	display: flex;
+	align-items: center;
+	transform: scale(0);
+	transition: all .5s ease;
+	&::before {
+		@include pos-abs(var(--clr-def),100%,100%,.8);
+		top: 0;
+		left: 0;
+	}
+	.team-overlay-content {
+		padding: 3rem;
+		p {
+			margin-bottom: 2rem;
+			color: var(--clr-white);
+		}
+		h4 {
+			line-height: 1;
+			margin-bottom: 1rem;
+			color: var(--clr-white);
+		}
+		span {
+			display: block;
+			margin-bottom: 3rem;
+			color: var(--clr-white);
+			line-height: 1;
+		}
+	}
+}
+
+
+.team-social {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+	li {
+		a {
+			i {
+				height: 40px;
+				width: 40px;
+				line-height: 40px;
+				text-align: center;
+				background-color: var(--clr-white);
+				color: var(--clr-def);
+				-webkit-border-radius: 50%;
+				border-radius: 50%;
+				transition: all .5s ease;
+				&:hover {
+					background-color: var(--clr-sec);
+					color: var(--clr-white);
+				}
+			}
+		}
+	}
+} 
+
+
+//Team 2
+
+.team-box-2 {
+	position: relative;
+	z-index: 1;
+	text-align: center;
+	padding: 6rem 3rem;
+	overflow: hidden;
+	-webkit-border-radius: 20px;
+	border-radius: 20px;
+	border: 10px solid transparent;
+	&:hover {
+		border: 10px solid var(--clr-sec);
+		.team-pic-2 {
+			img {
+				background: var(--clr-sec);
+			}
+		}
+		&::before {
+			background: var(--clr-gradient-4);
+		}
+		.team-shape-2 {
+			bottom: -100%;
+		}
+		.team-bio-2 {
+		margin-bottom: 3rem;
+		.heading-4 {
+				color: var(--clr-white); 
+			}
+			span {
+				color: var(--clr-white); 
+			}
+		}
+		.team-top {
+			opacity: 1;
+		}
+		.team-half-circle {
+			bottom: 0px;
+			left: 0px;
+		}
+	}
+	&::before {
+		@include pos-abs(#F5F5F5,100%,100%,1);
+		top: 0;
+		left: 0;
+		-webkit-border-radius: 5px;
+		border-radius: 5px;
+	}
+	.team-bio-2 {
+		margin-bottom: 3rem;
+		.heading-4 {
+			text-transform: capitalize;
+			line-height: 1.4;
+		}
+		span {
+			display: block;
+			font-size: 1.5rem;
+			line-height: 1;
+		}
+	}
+	.team-pic-2 {
+		margin-bottom: 4rem;
+		img {
+			border-radius: 50%;
+			padding: 5px;
+			background: var(--clr-white);
+		}
+	}
+	.team-social-2 {
+		.team-social {
+			justify-content: center;
+		}
+	}
+}
+
+.team-top {
+	top: 0;
+	right: 0;
+	position: absolute;
+	opacity: 0;
+	z-index: -1;
+}
+
+.team-half-circle {
+	bottom: -100px;
+	left: -100px;
+	position: absolute;
+	z-index: -1;
+	transition: all .5s ease;
+}
+
+.team-shape-2 {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	z-index: -1;
+	width: 100%;
+	transition: all .5s ease;
+}

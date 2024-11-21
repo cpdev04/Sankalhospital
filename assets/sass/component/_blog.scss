@@ -1,0 +1,143 @@
+/*-------------------------------------------------------
+34. Blog css  
+---------------------------------------------------------*/
+
+.blog-box {
+	box-shadow: 0px 10px 32px #00000012;
+	background: var(--clr-white);
+	.blog-pic {
+		position: relative;
+		z-index: 1;
+		.blog-meta {
+			position: absolute;
+			bottom: -20px;
+			left: 30px;
+			background: var(--clr-gradient-4);
+			padding: 1rem 2rem;
+			li {
+				display: flex;
+				align-items: center;
+				gap: 7px;
+				color: var(--clr-white);
+				font-size: 1.5rem;
+			}
+		}
+	}
+	.blog-desc {
+		padding: 5rem 3rem 3rem 3rem;
+		p {
+			margin-bottom: 2rem;
+		}
+	}
+} 
+
+
+//Blog 2
+
+
+.blog-box-2 {
+	padding: 15px;
+	background: var(--clr-white);
+	border-radius: 5px;
+	.blog-pic-2 {
+		position: relative;
+		z-index: 1;
+		.blog-main-2 {
+			width: 100%;
+		}
+		.blog-meta-2 {
+			position: absolute;
+			bottom: -20px;
+			left: 15px;
+			background: var(--clr-sec);
+			padding: 1.5rem;
+			border-radius: 0 50px 50px 0;
+			line-height: 1;
+			display: flex;
+			align-items: center;
+			gap: 7px;
+			span {
+				color: var(--clr-black);
+				line-height: 1;
+				font-size: 1.4rem;
+			}
+		}
+	}
+	.blog-desc-2 {
+		padding: 40px 15px 15px 15px;
+		.heading-4 {
+			
+		}
+		p {
+			padding-bottom: 30px;
+			margin-bottom: 15px;
+			border-bottom: 1px solid #707070;
+		}
+		.blog-date-com {
+			display: flex;
+			align-items: center;
+			gap: 3rem;
+			margin-bottom: 2rem;
+			li {
+				display: flex;
+				align-items: center;
+				gap: 1rem;
+				font-size: 1.5rem;
+				font-weight: 500;
+			}
+		}
+	}
+}
+
+.blog-btn-2 {
+	font-size: 16px;
+	font-weight: 600;
+	padding: 1.5rem 4rem;
+	border: 1px solid #1D71CE;
+	display: inline-block;
+	line-height: 1;
+	color: var(--clr-black);
+	transition: all .5s ease;
+	&:hover {
+		border: 1px solid transparent;
+		background: var(--clr-gradient-4);
+		color: var(--clr-white);
+	}
+}
+
+//Blog Page 
+
+.blog-df {
+	&.blog-page-df {
+		grid-template-columns: 550px 1fr;
+		align-items: center;
+	}
+}
+
+.blog-page-shadow {
+	box-shadow: 3px 4px 20px rgba(0,0,0,.15);
+	background: var(--clr-white);
+	margin-bottom: 3rem;
+	border-radius: 0 0 10px 10px;
+	font-size: 1.4rem;
+	.blog-meta {
+		display: flex;
+		align-items: center;
+		gap: 3rem;
+		i {
+			margin-right: 1rem;
+			color: var(--clr-def);
+		}
+		.blog-like-com {
+			display: flex;
+			align-items: center;
+			gap: 20px;
+		}
+	}
+	.blog-desc {
+		padding: 5rem;
+		.blog-text {
+			font-size: 1.8rem;
+		}
+	}
+}

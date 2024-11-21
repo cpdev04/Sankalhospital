@@ -1,0 +1,140 @@
+/*-------------------------------------------------------
+32. Review css
+---------------------------------------------------------*/
+
+.review-quote {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	translate: -50% -50%;
+	z-index: -1;
+}
+
+.review-single {
+	text-align: center;
+	.review-up {
+		margin-bottom: 3rem;
+		img {
+			-webkit-border-radius: 50%;
+			border-radius: 50%;
+			padding: 5px;
+			background-color: var(--clr-white);
+		}
+	}
+	.review-bottom {
+		padding: 0 13%;
+		p {
+			color: var(--clr-white);
+			margin-bottom: 3rem;
+			font-size: 24px;
+			font-style: italic;
+		}
+		.review-bio {
+			h5 {
+				color: var(--clr-white);
+				line-height: 1;
+				margin-bottom: 1rem;
+			}
+			span {
+				color: var(--clr-white);
+				line-height: 1;
+				display: block;
+			}
+		}
+	}
+}
+
+.rev-sldr{
+	.swiper-button-next:after, 
+	.swiper-button-prev:after {
+		font-family: 'IcoFont';
+		width: 40px;
+		height: 90px;
+		line-height: 90px;
+		font-size: 4rem;
+		color: var(--clr-heading);
+		background-color: var(--clr-sec);
+		text-align: center;
+	}
+	.swiper-button-next:after {
+		content: '\ea95';
+	}
+	.swiper-button-prev:after {
+		content: '\ea92';
+	}
+	&.swiper {
+		.swiper-pagination {
+			bottom: inherit;
+			left: 0;
+			width: inherit;
+			top: 39%;
+			display: flex;
+			flex-direction: column;
+			gap: 10px;
+			.swiper-pagination-bullet{
+				background: transparent;
+				height: 20px;
+				width: 20px;
+				border: 1px solid var(--clr-def);
+				position: relative;
+				z-index: 1;
+				opacity: 1;
+				&.swiper-pagination-bullet-active {
+					border-color: var(--clr-def);
+					&::after {
+						position: absolute;
+						left: 50%;
+						top: 50%;
+						content: "";
+						height: 5px;
+						width: 5px;
+						border-radius: 50%;
+						transform: translate(-50%, -50%);
+						background: var(--clr-def);
+						transition: all 0.35s ease-in-out;
+					}
+				}
+			}
+		}
+	}  
+}
+
+//Rev Slider
+
+.rev-single {
+	.quote-text {
+		position: relative;
+		z-index: 1;
+		margin-bottom: 3rem;
+		padding-left: 4rem;
+		margin-left: 50px;
+		&::before {
+			@include pos-abs(var(--clr-def),100%,1px,1);
+			top: 0;
+			left: 0;
+		}
+	}
+	.rev-bio {
+		display: flex;
+		align-items: center;
+		gap: 2rem;
+		img {
+			border-radius: 50%;
+		}
+		.rev-text {
+			.heading-4 {
+				text-transform: capitalize;
+				margin-bottom: 5px;
+			}
+			span {
+				display: block;
+				line-height: 1;
+				font-size: 1.5rem;
+			}
+		}
+	}
+}
+
+.rev-right {
+	padding-left: 60px;
+}
