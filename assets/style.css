@@ -1293,7 +1293,7 @@ label {
       left: 0; }
 
 .footer-logo img {
-  height: 60px;
+  height: 100px;
   display: block; }
 
 .about-us {
@@ -1473,7 +1473,9 @@ label {
   padding: 0; }
 
 .navbar .navbar-brand img {
-  height: 60px; }
+  height: 80px; 
+  width: 120px;
+}
 
 .nav-item.dropdown > .navbar-nav .nav-item .nav-link {
   padding: 0; }
